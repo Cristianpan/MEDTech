@@ -6,7 +6,7 @@ import { PageContent, PageInfo } from "@/interfaces/PagesInterface";
 import { Article } from "./components/Article";
 import { Sidebar } from "./components/Sidebar";
 
-export default function page({ params }: { params: { slug: string } }) {
+export default function BlogPage({ params }: { params: { slug: string } }) {
   const [pageData, setPageData] = useState<PageContent>({
     title: "",
     url: "",

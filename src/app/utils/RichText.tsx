@@ -1,5 +1,6 @@
 import { Typography } from "../MaterialComponents";
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const RichText = ({ content }: { content: any }) => {
   return (
     <>

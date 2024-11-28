@@ -10,7 +10,7 @@ import Link from "next/link";
 export const Sidebar = ({ articles }: { articles: PageInfo[] }) => {
   return (
     <aside className="mt-6 md:mt-7 border-t border-t-blue-gray-200 lg:border-t-0 ">
-      {articles.map(({ id, image, title, description, url }) => (
+      {articles.map(({ id, title, description, url }) => (
         <Card
           key={id}
           className=" border-b border-b-blue-gray-100 rounded-none pt-4"

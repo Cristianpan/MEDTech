@@ -1,5 +1,4 @@
 import { PageContent, PageInfo } from "@/interfaces/PagesInterface";
-import { text } from "stream/consumers";
 
 export const pagesInfo: PageInfo[] = [
   {

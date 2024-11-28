@@ -11,7 +11,7 @@ export interface PageContent {
   url: string, 
   date: string;
   mainImage: string; 
-  pageContent: any[][]; 
+  pageContent: any[][]; // eslint-disable-line @typescript-eslint/no-explicit-any 
   references: string[];
 }
 

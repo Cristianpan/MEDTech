@@ -15,6 +15,7 @@ export const Article = ({ page }: { page: PageContent }) => {
     maxPages: MAX_PAGE,
   });
 
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   const getItemProps = (index: number) =>
     ({
       variant: currentPage === index ? "filled" : "text",
