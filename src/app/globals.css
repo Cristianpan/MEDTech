@@ -4,8 +4,10 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-align: start;
 }
 
 :target {
   scroll-margin-top: 5rem;
 }
+
