@@ -9,8 +9,8 @@ import { useEffect, useState } from "react";
 
 const NavItems: { label: string; url: string }[] = [
   { label: "Inicio", url: "/" },
-  { label: "Blogs", url: "blogs" },
-  { label: "Nosotros", url: "about-us" },
+  { label: "Blogs", url: "/#blogs" },
+  { label: "Nosotros", url: "/nosotros" },
 ];
 
 function NavItem({ label, url }: { label: string; url: string }) {

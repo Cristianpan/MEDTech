@@ -11,3 +11,16 @@ html {
   scroll-margin-top: 5rem;
 }
 
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .grid-cols-3-to-1 {
+    grid-template-columns: 75% 25%;
+  }
+}
+

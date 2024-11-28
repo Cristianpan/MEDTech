@@ -8,11 +8,12 @@ import {
   Typography,
 } from "./MaterialComponents";
 import Link from "next/link";
+import { pagesInfo } from "../data";
 
 export default function Home() {
   return (
     <>
-      <section className="container px-10 mx-auto h-[calc(100vh-5rem)] flex flex-col-reverse mt-24 md:mt-0 justify-end md:grid md:grid-cols-2 items-center">
+      <section className="mx-auto h-[calc(100vh-5rem)] flex flex-col-reverse mt-24 md:mt-0 justify-end md:grid md:grid-cols-2 items-center">
         <div>
           <h1 className="text-3xl md:text-5xl font-semibold mt-5 text-blue-gray-900 leading-tight">
             Dealer Experiences
@@ -38,40 +39,32 @@ export default function Home() {
           />
         </div>
       </section>
-      <main
-        id="article"
-        className="container mx-auto h-[calc(100vh-5rem)] -z-50"
-      >
+      <main id="blogs" className="mx-auto h-[calc(100vh-5rem)]">
         <h2 className="text-center text-3xl my-14 font-bold text-blue-gray-900">
           Nuestro Blog
         </h2>
 
         <div className="flex flex-wrap gap-5 justify-center">
-          {[1, 2, 3].map((i) => (
-            <Card key={i} className="mt-6 max-w-96">
+          {pagesInfo.map(({id, image, title, description, url}) => (
+            <Card key={id} className="mt-6 max-w-96">
               <CardHeader color="blue-gray" className="relative h-56">
-                <img
-                  src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                  alt="card-image"
-                />
+                <img src={image} alt="card-image" className="object-cover w-full h-full object-center" />
               </CardHeader>
               <CardBody>
                 <Typography variant="h5" color="blue-gray" className="mb-2">
-                  UI/UX Review Check
+                  {title}
                 </Typography>
                 <Typography className="text-blue-gray-700">
-                  The place is close to Barceloneta Beach and bus stop just 2
-                  min by walk and near to &quot;Naviglio&quot; where you can
-                  enjoy the main night life in Barcelona.
+                  {description}
                 </Typography>
               </CardBody>
               <CardFooter className="pt-0">
-                <Link href="#">
+                <Link href={`/blog/${url}`}>
                   <Button
                     size="sm"
                     variant="text"
                     color="purple"
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 text-sm"
                   >
                     Leer más
                     <svg

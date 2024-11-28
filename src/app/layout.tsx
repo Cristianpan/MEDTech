@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "./providers"; 
+import { Providers } from "./providers";
 import NavbarComponent from "./Components/NavbarComponent";
 export const metadata: Metadata = {
   title: "MEDTech",
@@ -17,7 +17,7 @@ export default function RootLayout({
       <body>
         <Providers>
           <NavbarComponent />
-          {children}
+          <div className="container px-10 mx-auto">{children}</div>
         </Providers>
       </body>
     </html>
