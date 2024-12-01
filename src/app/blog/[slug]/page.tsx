@@ -1,12 +1,19 @@
 "use client";
 import { useEffect, useState } from "react";
 import { pagesContent, pagesInfo } from "@/data";
-import { notFound } from "next/navigation";
+import { notFound, useRouter } from "next/navigation";
 import { PageContent, PageInfo } from "@/interfaces/PagesInterface";
 import { Article } from "./components/Article";
 import { Sidebar } from "./components/Sidebar";
+import { Paginator } from "@/app/Components/Paginator";
 
-export default function BlogPage({ params }: { params: { slug: string } }) {
+export default function BlogPage({
+  params,
+  searchParams,
+}: {
+  params: { slug: string };
+  searchParams: { page: string };
+}) {
   const [pageData, setPageData] = useState<PageContent>({
     title: "",
     url: "",
@@ -16,6 +23,11 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
     references: [],
   });
   const [othersArticles, setOthersArticles] = useState<PageInfo[]>([]);
+  const router = useRouter();
+  const currentPage = +(searchParams.page || 1);
+
+  const MAX_PAGE = 4;
+  const INITIAL_PAGE = 1;
 
   useEffect(() => {
     const slug = params.slug;
@@ -33,8 +45,15 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
 
   return (
     <div className="lg:grid lg:grid-cols-3-to-1 lg:gap-20">
-        <Article page={pageData} />
-        <Sidebar articles={othersArticles} />
+      <div>
+        <Article page={pageData} currentPage={currentPage} />
+        <Paginator
+          initialPage={INITIAL_PAGE}
+          maxPages={MAX_PAGE}
+          router={router}
+        />
+      </div>
+      <Sidebar articles={othersArticles} />
     </div>
   );
 }
