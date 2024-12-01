@@ -11,7 +11,6 @@ interface PaginatorProps {
 
 export const Paginator = ({ initialPage = 1, maxPages }: PaginatorProps) => {
   const [currentPage, setCurrentPage] = useState(initialPage);
-  const items = Array.from({ length: maxPages }, (_, i) => i + 1);
 
   const handleNext = () => {
     if (currentPage < maxPages) {
