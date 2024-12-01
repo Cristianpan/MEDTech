@@ -13,11 +13,12 @@ const NavItems: { label: string; url: string }[] = [
   { label: "Nosotros", url: "/nosotros" },
 ];
 
-function NavItem({ label, url }: { label: string; url: string }) {
+function NavItem({ label, url, handler }: { label: string; url: string, handler: (open: boolean) => void }) {
   return (
     <Typography
       as={Link}
       href={url}
+      onClick={() => handler(false)}
       className="text-lg text-blue-gray-900 hover:text-purple-400 transition-colors duration-300 font-bold"
     >
       {label}
@@ -25,11 +26,11 @@ function NavItem({ label, url }: { label: string; url: string }) {
   );
 }
 
-function NavList() {
+function NavList({handler}: {handler: (opend: boolean) => void}) {
   return (
     <div className="mb-4 mt-2 mr-4 flex flex-col gap-3 items-end lg:m-y-0 lg:mr-0 lg:flex-row lg:items-center lg:gap-8">
       {NavItems.map((navItem) => (
-        <NavItem key={navItem.url} {...navItem} />
+        <NavItem key={navItem.url} {...navItem} handler={handler} />
       ))}
     </div>
   );
@@ -45,7 +46,11 @@ export function NavbarComponent() {
   }, [isDesktop]);
 
   return (
-    <Navbar color="transparent" className="sticky top-0 bg-white h-20 z-50" fullWidth>
+    <Navbar
+      color="transparent"
+      className="sticky top-0 bg-white h-20 z-50"
+      fullWidth
+    >
       <div className="container mx-auto flex items-center justify-between">
         <Typography
           as={Link}
@@ -55,7 +60,7 @@ export function NavbarComponent() {
           MEDTech
         </Typography>
         <div className="hidden lg:block">
-          <NavList />
+          <NavList handler={setOpen} />
         </div>
         <IconButton
           size="sm"
@@ -81,7 +86,7 @@ export function NavbarComponent() {
           </svg>
         </IconButton>
       </div>
-      <Drawer open={open} className="p-4" placement="right">
+      <Drawer open={open} className="p-4 h-screen" placement="right">
         <div className="flex flex-col items-end">
           <IconButton variant="text" color="blue-gray" onClick={handleOpen}>
             <svg
@@ -99,7 +104,7 @@ export function NavbarComponent() {
               />
             </svg>
           </IconButton>
-          <NavList />
+          <NavList handler={setOpen}/>
         </div>
       </Drawer>
     </Navbar>

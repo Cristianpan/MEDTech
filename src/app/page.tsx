@@ -23,7 +23,7 @@ export default function Home() {
             color. For standing out.
           </p>
 
-          <Link href="#article">
+          <Link href="#blogs">
             <Button className="mt-8 bg-purple-400 transition-colors duration-300">
               Conoce nuestro blog
             </Button>
