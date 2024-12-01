@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import { Typography } from "../MaterialComponents";
 
@@ -49,7 +50,7 @@ export const RichText = ({ content }: { content: any }) => {
 
         if (block.type === "image") {
           return (
-              <Image src={block.src} alt={block.alt} className="w-3/4 rounded-xl my-10 mx-auto" width={1000} height={400} />
+              <Image src={block.src} alt={block.alt} key={index} className="w-3/4 rounded-xl my-10 mx-auto" width={1000} height={400} />
           );
         }
       })}

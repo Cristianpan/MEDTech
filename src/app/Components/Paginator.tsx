@@ -1,21 +1,17 @@
+'use client'
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Button, IconButton } from "../MaterialComponents";
-import { useState, useEffect } from "react";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import { useState } from "react";
+import Link from "next/link";
 
 interface PaginatorProps {
-    initialPage?: number;
-    maxPages: number;
-    router: AppRouterInstance
-
+  initialPage?: number;
+  maxPages: number;
 }
 
-export const Paginator = ({ initialPage = 1, maxPages, router }: PaginatorProps) => {
+export const Paginator = ({ initialPage = 1, maxPages }: PaginatorProps) => {
   const [currentPage, setCurrentPage] = useState(initialPage);
-
-  useEffect(() => {
-    router.push(`?page=${currentPage}`, { scroll: true });
-  }, [currentPage]);
+  const items = Array.from({ length: maxPages }, (_, i) => i + 1);
 
   const handleNext = () => {
     if (currentPage < maxPages) {
@@ -49,10 +45,11 @@ export const Paginator = ({ initialPage = 1, maxPages, router }: PaginatorProps)
         <ArrowLeftIcon strokeWidth={2} className="h-4 w-4" />
       </Button>
       <div className="flex items-center gap-2">
-        <IconButton {...getItemProps(1)}>1</IconButton>
-        <IconButton {...getItemProps(2)}>2</IconButton>
-        <IconButton {...getItemProps(3)}>3</IconButton>
-        <IconButton {...getItemProps(4)}>4</IconButton>
+        {Array.from({ length: maxPages }, (_, i) => i + 1).map((item) => (
+          <Link key={item} href={`?page=${item}`}>
+            <IconButton {...getItemProps(item)}>{item}</IconButton>
+          </Link>
+        ))}
       </div>
       <Button
         variant="text"
