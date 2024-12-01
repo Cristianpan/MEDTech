@@ -13,7 +13,7 @@ import { pagesInfo } from "../data";
 export default function Home() {
   return (
     <>
-      <section className="mx-auto h-[calc(100vh-5rem)] flex flex-col-reverse mt-24 md:mt-0 justify-end md:grid md:grid-cols-2 items-center">
+      <section className="animate-fadeIn mx-auto h-[calc(100vh-5rem)] flex flex-col-reverse mt-24 md:mt-0 justify-end md:grid md:grid-cols-2 items-center">
         <div>
           <h1 className="text-3xl md:text-5xl font-semibold mt-5 text-blue-gray-900 leading-tight">
             Dealer Experiences
@@ -39,7 +39,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <main id="blogs" className="mx-auto h-[calc(100vh-5rem)]">
+      <main id="blogs" className="animate-fadeIn mx-auto h-[calc(100vh-5rem)]">
         <h2 className="text-center text-3xl my-14 font-bold text-blue-gray-900">
           Nuestro Blog
         </h2>

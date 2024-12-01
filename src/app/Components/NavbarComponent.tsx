@@ -26,7 +26,7 @@ function NavItem({ label, url, handler }: { label: string; url: string, handler:
   );
 }
 
-function NavList({handler}: {handler: (opend: boolean) => void}) {
+function NavList({handler}: {handler: (open: boolean) => void}) {
   return (
     <div className="mb-4 mt-2 mr-4 flex flex-col gap-3 items-end lg:m-y-0 lg:mr-0 lg:flex-row lg:items-center lg:gap-8">
       {NavItems.map((navItem) => (

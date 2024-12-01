@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Typography } from "../MaterialComponents";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -48,7 +49,7 @@ export const RichText = ({ content }: { content: any }) => {
 
         if (block.type === "image") {
           return (
-              <img src={block.src} alt={block.alt} className="md:w-3/4 rounded-xl my-10 mx-auto" />
+              <Image src={block.src} alt={block.alt} className="w-3/4 rounded-xl my-10 mx-auto" width={1000} height={400} />
           );
         }
       })}

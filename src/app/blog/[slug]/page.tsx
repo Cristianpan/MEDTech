@@ -44,7 +44,7 @@ export default function BlogPage({
   }, []);
 
   return (
-    <div className="lg:grid lg:grid-cols-3-to-1 lg:gap-20">
+    <div className="animate-fadeIn lg:grid lg:grid-cols-3-to-1 lg:gap-20">
       <div>
         <Article page={pageData} currentPage={currentPage} />
         <Paginator
