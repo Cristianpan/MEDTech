@@ -1,13 +1,18 @@
 import Image from "next/image";
 import { Typography } from "../MaterialComponents";
+import { Metadata } from "next";
+
+export const metadata: Metadata ={
+  title: "MEDTech | Nosotros"
+}
 
 export default function page() {
   return (
-    <div className="animate-fadeIn mx-auto min-h-[calc(100vh-5rem)] flex flex-col md:mt-0 md:gap-10 justify-end items-center md:grid md:grid-cols-2">
+    <div className="animate-fadeIn mx-auto min-h-[calc(100vh-5rem)] flex flex-col md:gap-10 justify-end items-center md:grid md:grid-cols-2">
       <div>
         <Typography
           variant="h1"
-          className="text-3xl font-semibold  text-blue-gray-900 leading-tight"
+          className="text-3xl font-semibold  mt-7 md:mt-0 text-blue-gray-900 leading-tight"
         >
           ¿Quiénes somos?
         </Typography>

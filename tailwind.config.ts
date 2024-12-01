@@ -19,6 +19,9 @@ const config: Config = withMT({
       }, 
       animation: {
         fadeIn: 'fadeIn 0.2s ease-in-out',
+      },
+      boxShadow: {
+        navbar: "1px 6px 8px rgba(131, 131, 131, 0.1)",
       }
     },
   },

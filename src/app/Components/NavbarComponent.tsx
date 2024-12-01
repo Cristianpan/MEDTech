@@ -48,7 +48,7 @@ export function NavbarComponent() {
   return (
     <Navbar
       color="transparent"
-      className="sticky top-0 bg-white h-20 z-50"
+      className="sticky top-0 bg-white h-20 z-50 !shadow-navbar"
       fullWidth
     >
       <div className="container mx-auto flex items-center justify-between">

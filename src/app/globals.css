@@ -10,6 +10,11 @@ html {
 :target {
   scroll-margin-top: 5rem;
 }
+
+#blogs {
+  scroll-margin-top: 8rem;
+}
+
 @media (min-width: 640px) {
   :target {
     scroll-margin-top: 0;

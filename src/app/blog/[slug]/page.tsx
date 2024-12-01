@@ -4,14 +4,27 @@ import { PageContent, PageInfo } from "@/interfaces/PagesInterface";
 import { Article } from "./components/Article";
 import { Sidebar } from "./components/Sidebar";
 import { Paginator } from "@/app/Components/Paginator";
+import { title } from "process";
 
-export default function BlogPage({
-  params,
-  searchParams,
-}: {
+interface BlogPageProps {
   params: { slug: string };
   searchParams: { page: string };
-}) {
+}
+
+export function generateMetadata({ params }: BlogPageProps) {
+  const { slug } = params;
+  console.log(pagesInfo, slug); 
+  const pageData: PageInfo | undefined = pagesInfo.find(
+    (page) => page.url === slug
+  );
+
+  return {
+    title: `MEDTech | ${pageData?.title}`,
+    description: `${pageData?.description}`,
+  };
+}
+
+export default function BlogPage({ params, searchParams }: BlogPageProps) {
   const currentPage = +(searchParams.page || 1);
   const MAX_PAGE = 4;
 
