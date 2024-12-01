@@ -48,7 +48,7 @@ export default function Home() {
           {pagesInfo.map(({id, image, title, description, url}) => (
             <Card key={id} className="mt-6 max-w-96">
               <CardHeader color="blue-gray" className="relative h-56">
-                <img src={image} alt="card-image" className="object-cover w-full h-full object-center" />
+                <Image src={image} alt="card-image" width={500} height={500} className="object-cover w-full h-full object-center" />
               </CardHeader>
               <CardBody>
                 <Typography variant="h5" color="blue-gray" className="mb-2">

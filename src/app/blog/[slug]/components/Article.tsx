@@ -1,6 +1,7 @@
 import { PageContent } from "@/interfaces/PagesInterface";
 import { Typography } from "../../../MaterialComponents";
 import { RichText } from "@/app/utils/RichText";
+import Image from "next/image";
 
 export const Article = ({
   page,
@@ -13,10 +14,12 @@ export const Article = ({
     <article className="mt-7">
       <div className="border-b border-b-blue-gray-50 mb-5">
         {currentPage === 1 && (
-          <img
+          <Image
             src={page.mainImage}
-            alt="team work"
+            alt={page.title}
             className="mb-4 md:h-[28rem] w-full rounded-xl object-cover"
+            width={1200}
+            height={800}
           />
         )}
 

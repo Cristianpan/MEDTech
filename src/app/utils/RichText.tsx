@@ -36,9 +36,19 @@ export const RichText = ({ content }: { content: any }) => {
           return (
             <ul key={index} className="list-disc pl-4 mb-3">
               {block.content.map((part: any, index: number) => {
-                return <li className="text-blue-gray-800 mb-1" key={index}>{part.textBold && <b className="text-blue-gray-900">{part.textBold}</b>} {part.text}</li>;
+                return (
+                  <li className="mb-1" key={index}>
+                    <Typography className="text-blue-gray-800">{part.text}</Typography>
+                  </li>
+                );
               })}
             </ul>
+          );
+        }
+
+        if (block.type === "image") {
+          return (
+              <img src={block.src} alt={block.alt} className="md:w-3/4 rounded-xl my-10 mx-auto" />
           );
         }
       })}

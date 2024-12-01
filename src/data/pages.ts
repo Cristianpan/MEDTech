@@ -5,8 +5,7 @@ export const pagesInfo: PageInfo[] = [
     id: 1,
     title: "Seguridad en una red",
     url: "seguridad-en-una-red",
-    image:
-      "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "/security-network.png",
     description:
       "El Internet de las cosas (IoT) es un sistema de interrelacionado, computación y dispositivos mecánicos y digitales, objetos, animales o personas que tienen identificadores únicos y la capacidad de transferir datos a través de una red sin requerir interacción humana.",
   },
@@ -14,8 +13,7 @@ export const pagesInfo: PageInfo[] = [
     id: 2,
     title: "Establecimiento de un enlace seguro de red",
     url: "enlace-seguro-de-red",
-    image:
-      "https://storage.googleapis.com/mr-web/images/ICMP_TUNNELING.max-1000x1000.png",
+    image: "/tunneling.png",
     description:
       "Un enlace seguro es un enlace de comunicación que es inmune a la escucha y la interceptación. Un enlace seguro garantiza la confidencialidad, la integridad y la autenticidad de los datos transmitidos entre dos sistemas.",
   },
@@ -23,8 +21,7 @@ export const pagesInfo: PageInfo[] = [
     id: 3,
     title: "Internet de las cosas",
     url: "internet-de-las-cosas",
-    image:
-      "https://media.licdn.com/dms/image/v2/C4D12AQFsZD-SLJhmPw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1596515652180?e=2147483647&v=beta&t=qXfEGZq30nBvsmLQyxNhqFocuVVYaUogyY-i35EhQu4",
+    image: "/internet-of-things.webp",
     description:
       "El Internet de las cosas (IoT) es un sistema de interrelacionado, computación y dispositivos mecánicos y digitales, objetos, animales o personas que tienen identificadores únicos y la capacidad de transferir datos a través de una red sin requerir interacción humana.",
   },
@@ -35,8 +32,7 @@ export const pagesContent: PageContent[] = [
     title: "Establecimiento de un enlace seguro de red",
     url: "enlace-seguro-de-red",
     date: "28 de noviembre de 2024",
-    mainImage:
-      "https://storage.googleapis.com/mr-web/images/ICMP_TUNNELING.max-1000x1000.png",
+    mainImage: "/tunneling.png",
     pageContent: [
       [
         {
@@ -108,6 +104,11 @@ export const pagesContent: PageContent[] = [
           ],
         },
         {
+          type: "image",
+          src: "/tunneling-pg-2.png",
+          alt: "ssl tunneling",
+        },
+        {
           type: "paragraph",
           content: [
             {
@@ -138,7 +139,7 @@ export const pagesContent: PageContent[] = [
         },
         {
           type: "heading",
-          text: "Aplicaciones del tunneling",
+          text: "Arquitectura del tunneling",
         },
         {
           type: "paragraph",
@@ -148,6 +149,11 @@ export const pagesContent: PageContent[] = [
               bolder: false,
             },
           ],
+        },
+        {
+          type: "image",
+          src: "/tunneling-pg-3.webp",
+          alt: "tunneling architecture",
         },
         {
           type: "list",
@@ -201,6 +207,11 @@ export const pagesContent: PageContent[] = [
             },
           ],
         },
+        {
+          type: "image",
+          src: "/tunneling-pg-4.jpg",
+          alt: "tunneling applications",
+        },
       ],
       [
         {
@@ -244,8 +255,7 @@ export const pagesContent: PageContent[] = [
     title: "Internet de las cosas",
     url: "internet-de-las-cosas",
     date: "28 de noviembre de 2024",
-    mainImage:
-      "https://media.licdn.com/dms/image/v2/C4D12AQFsZD-SLJhmPw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1596515652180?e=2147483647&v=beta&t=qXfEGZq30nBvsmLQyxNhqFocuVVYaUogyY-i35EhQu4",
+    mainImage: "/internet-of-things.webp",
     pageContent: [
       [
         {
@@ -329,6 +339,11 @@ export const pagesContent: PageContent[] = [
           ],
         },
         {
+          type: "image",
+          src: "/internet-of-things-pg-2.webp",
+          alt: "iot architecture",
+        },
+        {
           type: "heading",
           text: "Protocolos de comunicación",
         },
@@ -373,53 +388,63 @@ export const pagesContent: PageContent[] = [
       ],
       [
         {
-          "type": "heading",
-          "text": "Aplicaciones IoT"
+          type: "heading",
+          text: "Aplicaciones IoT",
         },
         {
-          "type": "list",
-          "content": [
+          type: "image",
+          src: "/internet-of-things-pg-3.png",
+          alt: "iot applications",
+        },
+        {
+          type: "list",
+          content: [
             {
-              "text": "Agricultura: En el sector agrícola, los aparatos IoT supervisan las condiciones del terreno, las tendencias climáticas y el desarrollo de las cosechas. Sensores específicos registran la humedad del terreno para mejorar el riego, asegurando un uso eficiente del agua. Además, se emplean para monitorear la condición del ganado, realizar el seguimiento de equipos y gestionar las cadenas de abastecimiento."
+              text: "Agricultura: En el sector agrícola, los aparatos IoT supervisan las condiciones del terreno, las tendencias climáticas y el desarrollo de las cosechas. Sensores específicos registran la humedad del terreno para mejorar el riego, asegurando un uso eficiente del agua. Además, se emplean para monitorear la condición del ganado, realizar el seguimiento de equipos y gestionar las cadenas de abastecimiento.",
             },
             {
-              "text": "Minorista: Los sensores monitorean el tráfico de peatones y la conducta de compra, facilitando a los comercios minoristas la reestructuración de productos para optimizar la experiencia del cliente. También se utilizan para administrar cadenas de abastecimiento, monitorear los envíos y garantizar que los productos estén disponibles en el momento adecuado."
+              text: "Minorista: Los sensores monitorean el tráfico de peatones y la conducta de compra, facilitando a los comercios minoristas la reestructuración de productos para optimizar la experiencia del cliente. También se utilizan para administrar cadenas de abastecimiento, monitorear los envíos y garantizar que los productos estén disponibles en el momento adecuado.",
             },
             {
-              "text": "Manufactura: En el proceso de producción, los dispositivos IoT industriales mejoran los procesos al supervisar el desempeño de las máquinas, identificar errores en los equipos y garantizar condiciones ideales como temperatura y humedad en las instalaciones. También se usan para monitorear inventarios, gestionar cadenas de abastecimiento y controlar la calidad de los productos finales. Estas soluciones aumentan la eficiencia productiva, reducen costos y disminuyen los tiempos de inactividad en los sistemas industriales."
+              text: "Manufactura: En el proceso de producción, los dispositivos IoT industriales mejoran los procesos al supervisar el desempeño de las máquinas, identificar errores en los equipos y garantizar condiciones ideales como temperatura y humedad en las instalaciones. También se usan para monitorear inventarios, gestionar cadenas de abastecimiento y controlar la calidad de los productos finales. Estas soluciones aumentan la eficiencia productiva, reducen costos y disminuyen los tiempos de inactividad en los sistemas industriales.",
             },
             {
-              "text": "Salud y bienestar: En el sector de la salud, los dispositivos IoT facilitan el monitoreo remoto de pacientes y la recolección de datos en tiempo real sobre indicadores clave como la frecuencia cardíaca, la presión arterial y la saturación de oxígeno. Estos datos se analizan para detectar patrones y prevenir problemas de salud antes de que se agraven."
-            }
-          ]
-        }
-      ], 
+              text: "Salud y bienestar: En el sector de la salud, los dispositivos IoT facilitan el monitoreo remoto de pacientes y la recolección de datos en tiempo real sobre indicadores clave como la frecuencia cardíaca, la presión arterial y la saturación de oxígeno. Estos datos se analizan para detectar patrones y prevenir problemas de salud antes de que se agraven.",
+            },
+          ],
+        },
+      ],
       [
         {
-          "type": "heading",
-          "text": "Beneficios"
+          type: "heading",
+          text: "Beneficios",
         },
         {
-          "type": "list",
-          "content": [
+          type: "image", 
+          src: "/internet-of-things-pg-4.jpg",
+          alt: "iot benefits",
+        },
+        {
+          type: "list",
+          content: [
             {
-              "text": "Eficiencia: Los dispositivos IoT mejoran los procesos en tiempo real, facilitando un uso más eficiente de los recursos, reduciendo los periodos de espera y disminuyendo los residuos en diversas industrias. Esto permite que las personas tengan más tiempo para concentrarse en otras tareas."
+              text: "Eficiencia: Los dispositivos IoT mejoran los procesos en tiempo real, facilitando un uso más eficiente de los recursos, reduciendo los periodos de espera y disminuyendo los residuos en diversas industrias. Esto permite que las personas tengan más tiempo para concentrarse en otras tareas.",
             },
             {
-              "text": "Automatización: El Internet de las Cosas habilita sistemas inteligentes que pueden realizar tareas repetitivas o complejas sin necesidad de intervención humana, incrementando la productividad y minimizando la posibilidad de errores."
+              text: "Automatización: El Internet de las Cosas habilita sistemas inteligentes que pueden realizar tareas repetitivas o complejas sin necesidad de intervención humana, incrementando la productividad y minimizando la posibilidad de errores.",
             },
             {
-              "text": "Ahorro de gastos: Una mayor eficiencia y automatización pueden reducir tanto los residuos como los costos de mano de obra. Además, al supervisar y optimizar el uso de recursos, como energía y materiales, se disminuyen los gastos operativos y se mejora el rendimiento de la inversión en los procesos."
+              text: "Ahorro de gastos: Una mayor eficiencia y automatización pueden reducir tanto los residuos como los costos de mano de obra. Además, al supervisar y optimizar el uso de recursos, como energía y materiales, se disminuyen los gastos operativos y se mejora el rendimiento de la inversión en los procesos.",
             },
             {
-              "text": "Control de calidad: Los dispositivos IoT facilitan el monitoreo continuo de las condiciones de funcionamiento y el estado de los productos, asegurando el cumplimiento de los estándares de calidad e identificando problemas de manera temprana."
+              text: "Control de calidad: Los dispositivos IoT facilitan el monitoreo continuo de las condiciones de funcionamiento y el estado de los productos, asegurando el cumplimiento de los estándares de calidad e identificando problemas de manera temprana.",
             },
             {
-              "text": "Mayor transparencia: La recolección y análisis de datos en tiempo real realizados por dispositivos IoT ofrecen una visión detallada de los procesos, mejorando la trazabilidad, la toma de decisiones basadas en datos y la confianza de los clientes."
-            }
-          ]
-        }
-      ] 
+              text: "Mayor transparencia: La recolección y análisis de datos en tiempo real realizados por dispositivos IoT ofrecen una visión detallada de los procesos, mejorando la trazabilidad, la toma de decisiones basadas en datos y la confianza de los clientes.",
+            },
+          ],
+        },
+      ],
     ],
     references: [],
   },

@@ -25,9 +25,8 @@ export default function BlogPage({
   const [othersArticles, setOthersArticles] = useState<PageInfo[]>([]);
   const router = useRouter();
   const currentPage = +(searchParams.page || 1);
-
   const MAX_PAGE = 4;
-  const INITIAL_PAGE = 1;
+
 
   useEffect(() => {
     const slug = params.slug;
@@ -35,6 +34,7 @@ export default function BlogPage({
       (page) => page.url === slug
     );
     const otherArticles = pagesInfo.filter((page) => page.url !== slug);
+
     if (!page) {
       notFound();
     } else {
@@ -48,7 +48,7 @@ export default function BlogPage({
       <div>
         <Article page={pageData} currentPage={currentPage} />
         <Paginator
-          initialPage={INITIAL_PAGE}
+          initialPage={currentPage}
           maxPages={MAX_PAGE}
           router={router}
         />
