@@ -10,4 +10,5 @@ export {
   CardBody,
   CardFooter,
   CardHeader,
+  Spinner
 } from "@material-tailwind/react";

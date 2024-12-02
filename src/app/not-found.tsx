@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { Button } from "./MaterialComponents";
+import { Button, Typography, Spinner } from "./MaterialComponents";
 import Image from "next/image";
 
 export default function NotFound() {
@@ -17,7 +17,7 @@ export default function NotFound() {
         alt="page not found"
         width={100}
         height={100}
-        className="w-1/2 lg:w-[30%]"
+        className="mt-7 w-full lg:w-[30%]"
       />
       <h1 className="text-5xl font-bold text-blue-gray-900">Oops!</h1>
       <p className="text-lg text-blue-gray-700">
@@ -26,6 +26,7 @@ export default function NotFound() {
       <Button className="mt-5" color="purple" onClick={handleBack}>
         Regresar
       </Button>
+      
     </div>
   );
 }

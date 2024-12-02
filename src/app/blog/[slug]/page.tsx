@@ -13,7 +13,6 @@ interface BlogPageProps {
 
 export function generateMetadata({ params }: BlogPageProps) {
   const { slug } = params;
-  console.log(pagesInfo, slug); 
   const pageData: PageInfo | undefined = pagesInfo.find(
     (page) => page.url === slug
   );

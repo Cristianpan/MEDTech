@@ -48,14 +48,14 @@ export function NavbarComponent() {
   return (
     <Navbar
       color="transparent"
-      className="sticky top-0 bg-white h-20 z-50 !shadow-navbar"
+      className="sticky top-0 bg-white z-50 !shadow-navbar flex items-center justify-center"
       fullWidth
     >
       <div className="container mx-auto flex items-center justify-between">
         <Typography
           as={Link}
           href="/"
-          className="mr-4 cursor-pointer text-xl font-bold text-purple-500"
+          className="mr-4 cursor-pointer text-2xl font-bold text-purple-500"
         >
           MEDTech
         </Typography>
