@@ -3,11 +3,11 @@ import { PageContent, PageInfo } from "@/interfaces/PagesInterface";
 export const pagesInfo: PageInfo[] = [
   {
     id: 1,
-    title: "Seguridad en una red",
+    title: "Seguridad en una red: Red perimetral",
     url: "seguridad-en-una-red",
     image: "/security-network.png",
     description:
-      "El Internet de las cosas (IoT) es un sistema de interrelacionado, computación y dispositivos mecánicos y digitales, objetos, animales o personas que tienen identificadores únicos y la capacidad de transferir datos a través de una red sin requerir interacción humana.",
+      "Una red perimetral, también conocida como red de zona desmilitarizada (DMZ), es un segmento estratégico dentro de la arquitectura de una red informática que se diseña específicamente para servir...",
   },
   {
     id: 2,
@@ -420,7 +420,7 @@ export const pagesContent: PageContent[] = [
           text: "Beneficios",
         },
         {
-          type: "image", 
+          type: "image",
           src: "/internet-of-things-pg-4.jpg",
           alt: "iot benefits",
         },
@@ -441,6 +441,157 @@ export const pagesContent: PageContent[] = [
             },
             {
               text: "Mayor transparencia: La recolección y análisis de datos en tiempo real realizados por dispositivos IoT ofrecen una visión detallada de los procesos, mejorando la trazabilidad, la toma de decisiones basadas en datos y la confianza de los clientes.",
+            },
+          ],
+        },
+      ],
+    ],
+    references: [],
+  },
+  {
+    title: "Seguridad en una red: Red Perimetral",
+    url: "seguridad-en-una-red",
+    mainImage: "/security-network.png",
+    date: "28 de noviembre de 2024",
+    pageContent: [
+      [
+        {
+          type: "heading",
+          text: "¿Qué es una red perimetral?",
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              text: "Una red perimetral, también conocida como red de zona desmilitarizada (DMZ, por sus siglas en inglés), es un segmento estratégico dentro de la arquitectura de una red informática que se diseña específicamente para servir como un espacio intermedio entre la red interna de una organización y el exterior, generalmente representado por Internet. Este concepto surge de la necesidad de proteger los activos más valiosos de una organización contra posibles amenazas externas, al tiempo que se facilita el acceso a ciertos servicios públicos como servidores web, sistemas de correo electrónico o plataformas de transferencia de archivos. De esta manera, la red perimetral no solo actúa como una barrera física y lógica que separa diferentes entornos de seguridad, sino que también sirve como un entorno monitoreado donde las interacciones con el exterior son cuidadosamente controladas. Esencialmente, permite a las organizaciones minimizar riesgos al reducir la superficie de ataque disponible para potenciales agresores, lo que la convierte en una pieza clave en cualquier estrategia de ciberseguridad moderna.",
+              bolder: false,
+            },
+          ],
+        },
+        {
+          type: "heading",
+          text: "¿Cuál es su función?",
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              text: "El propósito principal de una red perimetral radica en establecer un área de contención y control entre la red interna y el exterior, lo que permite gestionar de manera eficiente los accesos y proteger los datos y sistemas críticos. Este enfoque se basa en la idea de segmentar la infraestructura en zonas con diferentes niveles de seguridad, donde cada una de ellas tiene políticas y configuraciones específicas adaptadas a su función. Así, las redes perimetrales permiten que los servicios expuestos al público operen de forma segura sin comprometer la integridad de los sistemas internos.",
+              bolder: false,
+            },
+          ],
+        },
+        {
+          type: "image",
+          src: "/security-1.png",
+          alt: "how it works a security network",
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              text: "Por ejemplo, un servidor web alojado en la red perimetral puede interactuar con usuarios externos sin necesidad de tener acceso directo a la base de datos interna; en su lugar, las solicitudes son filtradas y monitoreadas para detectar posibles actividades maliciosas. Esto asegura que cualquier ataque dirigido al servidor quede contenido en la red perimetral, evitando que se propague hacia las zonas más sensibles de la organización. Además, estas redes permiten realizar un monitoreo constante del tráfico entrante y saliente, lo que facilita la detección temprana de anomalías o intentos de intrusión; a la vez, otorgan una flexibilidad considerable, ya que permiten implementar políticas específicas para cada tipo de tráfico según su origen, destino o propósito.",
+              bolder: false,
+            },
+          ],
+        },
+      ],
+      [
+        {
+          type: "heading",
+          text: "Elementos principales de una red perimetral",
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              text: "La efectividad de una red perimetral depende en gran medida de los elementos que la componen, los cuales trabajan de manera conjunta para garantizar su funcionalidad y seguridad. Uno de los componentes fundamentales es el firewall, que actúa como un filtro entre la red interna, la red perimetral y el exterior, estableciendo reglas para permitir o denegar el tráfico en función de parámetros como direcciones IP, puertos y protocolos. Los firewalls modernos también ofrecen capacidades avanzadas, como inspección profunda de paquetes (DPI), que analizan el contenido del tráfico para detectar amenazas más complejas.",
+              bolder: false,
+            },
+          ],
+        },
+        {
+          type: "image",
+          src: "/security-2.webp",
+          alt: "firewall",
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              text: "Otro elemento clave son los sistemas de detección y prevención de intrusiones (IDS/IPS), diseñados para identificar patrones de comportamiento sospechoso y detener ataques antes de que puedan causar daños significativos. Estos sistemas trabajan en conjunto con herramientas de monitoreo en tiempo real que proporcionan visibilidad sobre lo que ocurre en la red perimetral. Además, los servidores proxy cumplen un rol importante, ya que no solo actúan como intermediarios para las conexiones externas, sino que también ayudan a ocultar las direcciones IP internas, reduciendo así la exposición de la red. ",
+              bolder: false,
+            },
+          ],
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              text: "Las redes privadas virtuales (VPN) también suelen formar parte de la red perimetral, ya que permiten establecer conexiones seguras y cifradas entre usuarios remotos y los recursos internos de la organización. A esto se suman otros elementos como las herramientas de autenticación y autorización, que aseguran que solo usuarios legítimos tengan acceso a los recursos, y los sistemas de balanceo de carga, los cuales distribuyen eficientemente el tráfico para evitar sobrecargas y garantizar la disponibilidad de los servicios. ",
+              bolder: false,
+            },
+          ],
+        },
+      ],
+      [
+        {
+          type: "heading",
+          text: "Ventajas de implementar redes perimetrales",
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              text: "La implementación de una red perimetral ofrece múltiples ventajas que fortalecen tanto la seguridad como la operatividad de una organización. En primer lugar, proporciona un nivel adicional de protección al aislar los sistemas críticos de las amenazas externas, minimizando así el impacto de posibles vulnerabilidades. Esta separación física y lógica entre la red interna y los servicios expuestos garantiza que, incluso en caso de un ataque exitoso, los daños queden confinados a la red perimetral, lo que facilita su contención y recuperación. ",
+              bolder: false,
+            },
+          ],
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              text: "Asimismo, las redes perimetrales permiten una mayor segmentación de la infraestructura tecnológica, lo que no solo mejora la gestión de políticas de seguridad, sino que también simplifica la identificación y resolución de problemas. Por otro lado, centralizan el monitoreo del tráfico, lo que facilita la detección de anomalías y el análisis forense en caso de incidentes de seguridad. También, al optimizar la disposición de servicios accesibles públicamente, estas redes garantizan un alto nivel de disponibilidad y rendimiento, mejorando la experiencia del usuario final y reduciendo el tiempo de inactividad. ",
+              bolder: false,
+            },
+          ],
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              text: "Además, la flexibilidad que ofrecen las redes perimetrales permite adaptarse a las necesidades específicas de cada organización, lo que las convierte en una solución versátil para diferentes sectores. Por ejemplo, en entornos empresariales, pueden alojar servidores de correo y portales web corporativos, mientras que en el ámbito gubernamental pueden servir como intermediarios seguros para plataformas de servicios públicos.",
+              bolder: false,
+            },
+          ],
+        },
+        {
+          type: "image",
+          src: "/security-3.webp",
+          alt: "advantages of security network",
+        },
+      ],
+      [
+        {
+          type: "heading",
+          text: "Retos y consideraciones en su implementación",
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              text: "Si bien las redes perimetrales ofrecen beneficios significativos, su implementación puede presentar varios desafíos que requieren una planificación cuidadosa. Uno de los principales retos es garantizar que los dispositivos y sistemas de seguridad estén configurados correctamente; una configuración incorrecta no solo puede reducir la efectividad de la red, sino que también puede crear nuevas vulnerabilidades explotables por atacantes. Además, las organizaciones deben equilibrar la seguridad con la usabilidad; imponer restricciones demasiado rígidas podría afectar negativamente la productividad, mientras que políticas demasiado laxas podrían comprometer la integridad de los sistemas.",
+              bolder: false,
+            },
+          ],
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              text: "Otro aspecto importante es el costo asociado con la implementación y mantenimiento de una red perimetral. Este tipo de infraestructura requiere inversiones en hardware, software y capacitación del personal, lo que puede ser un desafío, especialmente para pequeñas y medianas empresas. Asimismo, el entorno de ciberseguridad está en constante evolución, por lo que es necesario realizar actualizaciones regulares para mantenerse al día con las últimas amenazas y tecnologías. Por último, aunque las redes perimetrales son altamente efectivas, no deben considerarse una solución definitiva; en su lugar, deben integrarse como parte de una estrategia de seguridad más amplia que incluya medidas como la educación del personal, pruebas regulares de penetración y monitoreo continuo.",
+              bolder: false,
             },
           ],
         },

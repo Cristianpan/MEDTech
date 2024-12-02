@@ -15,12 +15,12 @@ export default function Home() {
     <>
       <section className="animate-fadeIn mx-auto h-[calc(100vh-5rem)] flex flex-col-reverse mt-24 md:mt-0 justify-end md:grid md:grid-cols-2 items-center">
         <div>
-          <h1 className="text-3xl md:text-5xl font-semibold mt-5 text-blue-gray-900 leading-tight">
-            Dealer Experiences
+          <h1 className="text-3xl md:text-5xl font-semibold mt-5 text-blue-gray-900 leading-tight md:max-w-[75%]">
+            ¡Hablemos de redes!
           </h1>
           <p className="mt-5 text-blue-gray-400 md:w-4/6">
-            The time is now for it to be okay to be great. For being a bright
-            color. For standing out.
+            En nuestro blog encontrarás información sobre redes, seguridad y
+            mucho más. Aprende con nosotros y mantente actualizado.
           </p>
 
           <Link href="#blogs">
@@ -39,8 +39,8 @@ export default function Home() {
           />
         </div>
       </section>
-      <main id="blogs" className="animate-fadeIn mx-auto h-[calc(100vh-5rem)]">
-        <h2 className="text-center text-3xl my-14 font-bold text-blue-gray-900">
+      <main id="blogs" className="animate-fadeIn mx-auto min-h-[calc(100vh-5rem)] pb-5 lg:pb-0">
+        <h2 className="text-center text-3xl my-10 font-bold text-blue-gray-900">
           Nuestro Blog
         </h2>
 

@@ -4,7 +4,6 @@ import { PageContent, PageInfo } from "@/interfaces/PagesInterface";
 import { Article } from "./components/Article";
 import { Sidebar } from "./components/Sidebar";
 import { Paginator } from "@/app/Components/Paginator";
-import { title } from "process";
 
 interface BlogPageProps {
   params: { slug: string };
