@@ -1,6 +1,6 @@
 import { PageContent } from "@/interfaces/PagesInterface";
-import { Typography } from "../../../MaterialComponents";
-import { RichText } from "@/app/utils/RichText";
+import { Typography } from "@/components/ui";
+import { RichText } from "@/utils/RichText";
 import Image from "next/image";
 
 export const Article = ({

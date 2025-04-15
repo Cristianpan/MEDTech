@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Typography } from "../MaterialComponents";
+import { Typography } from "@/components/ui";
 import { Metadata } from "next";
 
 export const metadata: Metadata ={

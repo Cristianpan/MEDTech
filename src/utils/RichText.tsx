@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { Typography } from "../MaterialComponents";
+import { Typography } from "@/components/ui";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export const RichText = ({ content }: { content: any }) => {
