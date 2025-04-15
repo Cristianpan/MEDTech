@@ -1,5 +1,4 @@
 export interface PageInfo {
-  id: number
   title: string;
   url: string;
   description: string;
@@ -10,6 +9,7 @@ export interface PageContent {
   title: string;
   url: string, 
   date: string;
+  description: string,
   mainImage: string; 
   pageContent: any[][]; // eslint-disable-line @typescript-eslint/no-explicit-any 
   references: string[];

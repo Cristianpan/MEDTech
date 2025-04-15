@@ -11,9 +11,9 @@ export const Sidebar = ({ articles }: { articles: PageInfo[] }) => {
   return (
     <div className="relative">
       <aside className="mt-6 md:sticky md:top-16 border-t border-t-blue-gray-200 lg:border-t-0 ">
-        {articles.map(({ id, title, description, url }) => (
+        {articles.map(({ title, description, url }) => (
           <Card
-            key={id}
+            key={url}
             className=" border-b border-b-blue-gray-100 rounded-none pt-4"
             shadow={false}
             radioGroup="0"

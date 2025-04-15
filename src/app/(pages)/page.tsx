@@ -8,9 +8,15 @@ import {
   Typography,
 } from "@/components/ui/MaterialComponents";
 import Link from "next/link";
-import { pagesInfo } from "../data";
+import { PageInfo } from "@/interfaces";
+import { apiUrls } from "@/constants";
 
-export default function Home() {
+export default async function Home() {
+
+  const response = await fetch(apiUrls.blog);
+  const blogsInfo: PageInfo[] = await response.json();
+
+
   return (
     <>
       <section className="animate-fadeIn mx-auto h-[calc(100vh-5rem)] flex flex-col-reverse mt-24 md:mt-0 justify-end md:grid md:grid-cols-2 items-center">
@@ -45,8 +51,8 @@ export default function Home() {
         </h2>
 
         <div className="flex flex-wrap gap-5 justify-center">
-          {pagesInfo.map(({id, image, title, description, url}) => (
-            <Card key={id} className="mt-6 max-w-96">
+          {blogsInfo.map(({ image, title, description, url }) => (
+            <Card key={url} className="mt-6 max-w-96">
               <CardHeader color="blue-gray" className="relative h-56">
                 <Image src={image} alt="card-image" width={500} height={500} className="object-cover w-full h-full object-center" />
               </CardHeader>
