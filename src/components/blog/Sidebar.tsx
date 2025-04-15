@@ -4,7 +4,7 @@ import {
   CardBody,
   Button,
   Typography,
-} from "../../../MaterialComponents";
+} from "@/components/ui";
 import Link from "next/link";
 
 export const Sidebar = ({ articles }: { articles: PageInfo[] }) => {

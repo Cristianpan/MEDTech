@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "./providers";
-import NavbarComponent from "./Components/NavbarComponent";
+import { Providers } from "@/providers";
+import { NavbarComponent } from "@/components/layout";
+
 export const metadata: Metadata = {
   title: "MEDTech",
   description: "Tu blog sobre redes, ciberseguridad y más",

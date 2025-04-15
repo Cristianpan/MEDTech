@@ -1,6 +1,6 @@
 'use client'
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
-import { Button, IconButton } from "../MaterialComponents";
+import { Button, IconButton } from "@/components/ui";
 import { useState } from "react";
 import Link from "next/link";
 

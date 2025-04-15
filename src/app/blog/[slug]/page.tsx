@@ -1,9 +1,8 @@
 import { pagesContent, pagesInfo } from "@/data";
 import { notFound } from "next/navigation";
 import { PageContent, PageInfo } from "@/interfaces/PagesInterface";
-import { Article } from "./components/Article";
-import { Sidebar } from "./components/Sidebar";
-import { Paginator } from "@/app/Components/Paginator";
+import { Sidebar, Article } from "@/components/blog";
+import { Paginator } from "@/components/ui";
 
 interface BlogPageProps {
   params: { slug: string };

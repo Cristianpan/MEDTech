@@ -1,9 +1,9 @@
 "use client";
 
-import { Navbar, Drawer, IconButton, Typography } from "../MaterialComponents";
+import { Navbar, Drawer, IconButton, Typography } from "@/components/ui";
 
 import Link from "next/link";
-import { useMediaQuery } from "../hooks/useMediaQuery";
+import { useMediaQuery } from "@/hooks/ui";
 
 import { useEffect, useState } from "react";
 
@@ -110,5 +110,3 @@ export function NavbarComponent() {
     </Navbar>
   );
 }
-
-export default NavbarComponent;

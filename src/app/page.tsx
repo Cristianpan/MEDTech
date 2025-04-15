@@ -6,7 +6,7 @@ import {
   CardBody,
   CardFooter,
   Typography,
-} from "./MaterialComponents";
+} from "@/components/ui/MaterialComponents";
 import Link from "next/link";
 import { pagesInfo } from "../data";
 
