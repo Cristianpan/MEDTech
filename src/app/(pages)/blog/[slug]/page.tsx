@@ -2,6 +2,7 @@ import { PageContent, PageInfo } from "@/interfaces/PagesInterface";
 import { Sidebar, Article } from "@/components/blog";
 import { Paginator } from "@/components/ui";
 import { apiUrls } from "@/constants";
+import { notFound } from "next/navigation";
 
 interface BlogPageProps {
   params: { slug: string };
@@ -33,6 +34,11 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
   const slug = params.slug;
 
   const response = await fetch(`${apiUrls.blog}/${slug}`);
+
+  if (!response.ok) {
+    notFound();
+  }
+
   const {  blogData , otherArticles }: API_Response = await response.json();
 
   return (
